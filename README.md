@@ -1,2 +1,0 @@
-# Nile
-test project
