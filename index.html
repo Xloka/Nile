@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="nile">
+  <head>
+    <meta charset="utf-8">
+    <title>Nile Museum</title>
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="bower_components/material-design-lite/material.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/s.min.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular-full/angular.min.js"></script>
+    <script src="bower_components/angular-full/angular-route.min.js"></script>
+    <script src="bower_components/material-design-lite/material.min.js"></script>
+    <script src="bower_components/wow/dist/wow.min.js"></script>
+    <script src="js/s.js"></script>
+  </head>
+  <body>
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Nile Museum</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#/">Home</a>
+        <a class="mdl-navigation__link" href="#/about">About</a>
+        <a class="mdl-navigation__link" href="#/nile">Nile</a>
+        <a class="mdl-navigation__link" href="#/creatures">Creatures</a>
+        <a class="mdl-navigation__link" href="#/sights">Sights</a>
+        <a class="mdl-navigation__link" href="#/news">News</a>
+        <a class="mdl-navigation__link" href="#/contact">Contact</a>
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width ">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="sample6">
+              <label class="mdl-textfield__label" for="sample-expandable">Search</label>
+            </div>
+          </div>
+        </form>
+        <button id="lang-switcher" class="mdl-button mdl-js-button mdl-button--icon">
+            <i class="material-icons">language</i>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu" for="lang-switcher">
+            <li class="mdl-menu__item">English</li>
+            <li class="mdl-menu__item">عربي</li>
+            <li class="mdl-menu__item">French</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Nile Museum</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="#/">Home</a>
+      <a class="mdl-navigation__link" href="#/about">About</a>
+      <a class="mdl-navigation__link" href="#/nile">Nile</a>
+      <a class="mdl-navigation__link" href="#/creatures">Creatures</a>
+      <a class="mdl-navigation__link" href="#/sights">Sights</a>
+      <a class="mdl-navigation__link" href="#/news">News</a>
+      <a class="mdl-navigation__link" href="#/contact">Contact</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content" ng-view>
+    <div class="loading"> Loading.... </div>
+    </div>
+    <footer class="mdl-mega-footer">
+    <div class="mdl-mega-footer__bottom-section">
+    <div class="mdl-logo">Nile Museum &copy;</div>
+    <ul>
+      <li><a href="#/" target="_blank" class="fa fa-facebook" ></a></li>
+      <li><a href="#/" target="_blank" class="fa fa-twitter" ></a></li>
+      <li><a href="#/" target="_blank" class="fa fa-phone" ></a></li>
+    </ul>
+    </div>
+    </footer>
+  </main>
+</div>
+  </body>
+</html>
