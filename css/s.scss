@@ -30,8 +30,8 @@
   -webkit-font-smoothing: antialiased;
 }
 //variables
-$primary-color: #f7d00f;
-$secondary-color: #897416;
+$primary-color: #3F51B5;
+$secondary-color: #E8EAF6;
 $third-color: #3d3718;
 $bg-color: #1f1e19;
 $white: #fefefe;
@@ -118,4 +118,25 @@ footer {
   top: 0;
   left: 0;
   z-index: 9;
+}
+.map{
+  min-height: 300px;
+  iframe{
+    min-height: 300px;
+  }
+}
+.pc{
+  color: $primary-color;
+}
+.sc{
+  color: $secondary-color;
+}
+#godown{
+   margin-top: 0px;
+   background-color: $primary-color;
+   color:$secondary-color;
+}
+#godown.mdl-button--fab .material-icons{
+  font-size: 46px;
+  transform: translate(-22px,-10px);
 }
