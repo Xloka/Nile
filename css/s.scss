@@ -101,7 +101,6 @@ footer {
     }
   }
 }
-
 .heading{
   h1{
     text-align:center;
@@ -142,5 +141,5 @@ footer {
     margin-left: 50%;
     margin-top: 83px;
     margin-bottom: 131px;
-    border-bottom: 5px solid #3E50B2;
+    border-bottom: 5px solid $primary-color;
 }

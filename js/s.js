@@ -15,12 +15,6 @@ var wow = new WOW(
   }
 );
 wow.init();
-
-
-
-$("#scroll-up-btn").click(scrollToTop);
-$("#scroll-down-btn").click(scrollToBottom);
-
 });
 
 window.onload=function(){
@@ -28,6 +22,7 @@ window.onload=function(){
       $('main').animate({ scrollTop: '500px' }, "slow");
   });
 };
+
 var app = angular.module('nile',['ngRoute']);
 var auth = false;
 app.config(function($routeProvider, $locationProvider) {
@@ -94,24 +89,3 @@ function enableScroll() {
     window.ontouchmove = null;
     document.onkeydown = null;
 }
-var scrollTo = function(top) {
-  var content = $('main');
-  var target = top ? 0 : $(".first-section").height();
-  content.animate({ scrollTop: target }, "slow");
-};
-
-var scrollToTop = function() {
-  scrollTo(true);
-};
-
-var scrollToBottom = function() {
-  scrollTo(false);
-};
-var scrollToPage = function(){
-  scrollTo(false);
-};
-$(function() {
-  $("#scroll-up-btn").click(scrollToTop);
-  $("#scroll-down-btn").click(scrollToBottom);
-  $("#godown").click(scrollToPage);
-});
