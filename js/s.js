@@ -15,7 +15,19 @@ var wow = new WOW(
   }
 );
 wow.init();
+
+
+
+$("#scroll-up-btn").click(scrollToTop);
+$("#scroll-down-btn").click(scrollToBottom);
+
 });
+
+window.onload=function(){
+  $("#godown").click(function (event) {
+      $('main').animate({ scrollTop: '500px' }, "slow");
+  });
+};
 var app = angular.module('nile',['ngRoute']);
 var auth = false;
 app.config(function($routeProvider, $locationProvider) {
@@ -46,3 +58,60 @@ app.config(function($routeProvider, $locationProvider) {
   });
 });
 app.controller('pagecontroller');
+
+
+
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+
+function disableScroll() {
+  if (window.addEventListener) // older FF
+      window.addEventListener('DOMMouseScroll', preventDefault, false);
+  window.onwheel = preventDefault; // modern standard
+  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+  window.ontouchmove  = preventDefault; // mobile
+  document.onkeydown  = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.onmousewheel = document.onmousewheel = null;
+    window.onwheel = null;
+    window.ontouchmove = null;
+    document.onkeydown = null;
+}
+var scrollTo = function(top) {
+  var content = $('main');
+  var target = top ? 0 : $(".first-section").height();
+  content.animate({ scrollTop: target }, "slow");
+};
+
+var scrollToTop = function() {
+  scrollTo(true);
+};
+
+var scrollToBottom = function() {
+  scrollTo(false);
+};
+var scrollToPage = function(){
+  scrollTo(false);
+};
+$(function() {
+  $("#scroll-up-btn").click(scrollToTop);
+  $("#scroll-down-btn").click(scrollToBottom);
+  $("#godown").click(scrollToPage);
+});
