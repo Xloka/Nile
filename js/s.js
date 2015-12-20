@@ -1,5 +1,4 @@
 $(document).ready(function (){
-	//$(".dropdown-button").dropdown();
 var wow = new WOW(
   {
     boxClass:     'wow',      // animated element css class (default is wow)
@@ -15,45 +14,13 @@ var wow = new WOW(
   }
 );
 wow.init();
+
 });
 
-window.onload=function(){
-  $("#godown").click(function (event) {
-      $('main').animate({ scrollTop: '500px' }, "slow");
-  });
-};
 
-var app = angular.module('nile',['ngRoute']);
-var auth = false;
-app.config(function($routeProvider, $locationProvider) {
-  $routeProvider
-  .when('/',{
-    templateUrl:'pages/home.html'
-  })
-  .when('/about',{
-    templateUrl:'pages/about.html'
-  })
-  .when('/nile',{
-      templateUrl:'pages/nile.html'
-  })
-  .when('/creatures',{
-      templateUrl:'pages/creatures.html'
-  })
-  .when('/sights',{
-      templateUrl:'pages/sights.html'
-  })
-  .when('/news',{
-      templateUrl:'pages/news.html'
-  })
-  .when('/contact',{
-      templateUrl:'pages/contact.html'
-  })
-  .otherwise({
-    redirectTo:'/'
-  });
-});
+
+var app = angular.module('nile' ,[]);
 app.controller('pagecontroller');
-
 
 
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};

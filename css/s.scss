@@ -40,6 +40,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+p{
+  font-size: 20px;
+line-height: 2em;
+}
 .demo-layout-transparent .mdl-layout__header,
 .demo-layout-transparent .mdl-layout__drawer-button {
   color: white;
@@ -104,6 +108,7 @@ footer {
 .heading{
   h1{
     text-align:center;
+    transform: translate(0%, 50%);
   }
 }
 .loading {
@@ -136,10 +141,13 @@ footer {
   font-size: 46px;
   transform: translate(-22px,-10px);
 }
-.topme{
-    transform: rotate(-90deg);
+.topme{    
     margin-left: 50%;
+    transform: translate(0%, 50%) rotate(-90deg);
     margin-top: 83px;
     margin-bottom: 131px;
     border-bottom: 5px solid $primary-color;
+}
+.topme-data{
+  transform: translate(0%, 50%);
 }
