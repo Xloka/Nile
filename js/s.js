@@ -12,7 +12,7 @@ window.onload=function(){
     $('.bigdata-bg').fadeIn('slow');
     $('.bigdata').fadeIn('slow');
   });
-  $('.bigdata-bg').click(function () {
+  $('.bigdata-bg,#close').click(function () {
     $('.bigdata').fadeOut('slow');
     $('.bigdata-bg').fadeOut('slow');
   });

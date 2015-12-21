@@ -102,6 +102,7 @@ line-height: 2em;
 }
 .clean-heading{
   padding: 0px 0px;
+  padding-bottom: 75px;
   background-color: $secondary-color;
   .heading{
     margin-top: 0;
@@ -221,4 +222,10 @@ color: $primary-color;
   margin: 20px auto;
   border: 5px solid $secondary-color;
   border-radius: 5px;
+}
+#close{
+  position: fixed;
+  top: -10px;
+  left: 12%;
+  z-index: 1;
 }
