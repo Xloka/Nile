@@ -11,7 +11,8 @@
     <script src="bower_components/angular-full/angular.min.js"></script>
     <script src="bower_components/material-design-lite/material.min.js"></script>
     <script src="bower_components/wow/dist/wow.min.js"></script>
-    <script src="js/s.js"></script>
+    <script src="js/isin.js"></script>
+<script src="js/s.js"></script>
 
   </head>
   <body>
@@ -26,7 +27,10 @@
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="/index.html">Home</a>
         <a class="mdl-navigation__link" href="/about.html">About</a>
-        <a class="mdl-navigation__link" href="/nile.html">Nile</a>
+        <a id="demo-menu-lower-left"  class="mdl-navigation__link" href="#">Nile</a>
+        <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
+          <li class="mdl-menu__item">Some Action</li>
+        </ul>
         <a class="mdl-navigation__link" href="/creatures.html">Creatures</a>
         <a class="mdl-navigation__link" href="/sights.html">Sights</a>
         <a class="mdl-navigation__link" href="/news.html">News</a>
@@ -58,7 +62,7 @@
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="/index.html">Home</a>
       <a class="mdl-navigation__link" href="/about.html">About</a>
-      <a class="mdl-navigation__link" href="/nile.html">Nile</a>
+
       <a class="mdl-navigation__link" href="/creatures.html">Creatures</a>
       <a class="mdl-navigation__link" href="/sights.html">Sights</a>
       <a class="mdl-navigation__link" href="/news.html">News</a>
@@ -99,10 +103,6 @@
     </footer>
   </main>
 </div>
-<script type="text/javascript">
-  $("#godown").click(function (event) {
-      $('main').animate({ scrollTop: '500px' }, "slow");
-  });
-</script>
+
   </body>
 </html>

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Nile Museum</title>
-    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="bower_components/material-design-lite/material.min.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/s.min.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular-full/angular.min.js"></script>
     <script src="bower_components/material-design-lite/material.min.js"></script>
     <script src="bower_components/wow/dist/wow.min.js"></script>
+    <script src="js/isin.js"></script>
     <script src="js/s.js"></script>
 
   </head>
@@ -26,7 +27,8 @@
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="/index.html">Home</a>
         <a class="mdl-navigation__link" href="/about.html">About</a>
-        <a class="mdl-navigation__link" href="/nile.html">Nile</a>
+        <a id="demo-menu-lower-left"  class="mdl-navigation__link" href="#">Nile</a>
+
         <a class="mdl-navigation__link" href="/creatures.html">Creatures</a>
         <a class="mdl-navigation__link" href="/sights.html">Sights</a>
         <a class="mdl-navigation__link" href="/news.html">News</a>
@@ -58,7 +60,7 @@
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="/index.html">Home</a>
       <a class="mdl-navigation__link" href="/about.html">About</a>
-      <a class="mdl-navigation__link" href="/nile.html">Nile</a>
+
       <a class="mdl-navigation__link" href="/creatures.html">Creatures</a>
       <a class="mdl-navigation__link" href="/sights.html">Sights</a>
       <a class="mdl-navigation__link" href="/news.html">News</a>
@@ -81,10 +83,242 @@
           <i class="material-icons">&#xE313;</i>
         </button>
       </div>
-      <div class="page white mdl-grid">
-        <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet heading">
-          <h1 class="mdl-typography--display-1-color-contrast">Nile Basin Countries</h1>
-          <hr>
+      <div class="page clean-heading">
+        <div class="wow bounceInUp heading">
+          <h1><span class="pc">Nile</span> Basin Countries</h1>
+        </div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title" style="background: url('img/Flag_of_Egypt.svg') center / cover;">
+                <h2 class="mdl-card__title-text">Egypt</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Read More..
+                </a>
+              </div>
+              <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">share</i>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title" style="background: url('img/Flag_of_Sudan.svg') center / cover;">
+                <h2 class="mdl-card__title-text">Sudan</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Read More..
+                </a>
+              </div>
+              <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">share</i>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title" style="background: url('img/Flag_of_Kenya.svg') center / cover;">
+                <h2 class="mdl-card__title-text">Kenya</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Read More..
+                </a>
+              </div>
+              <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">share</i>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title" style="background: url('img/Flag_of_Ethiopia.svg') center / cover;">
+                <h2 class="mdl-card__title-text">Ethiopia</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Read More..
+                </a>
+              </div>
+              <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">share</i>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title" style="background: url('img/Flag_of_Eritrea.svg') center / cover;">
+                <h2 class="mdl-card__title-text">Eritrea</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Read More..
+                </a>
+              </div>
+              <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">share</i>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title" style="background: url('img/Flag_of_Rwanda.svg') center / cover;">
+                <h2 class="mdl-card__title-text">Rwanda</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Read More..
+                </a>
+              </div>
+              <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">share</i>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title" style="background: url('img/Flag_of_South_Sudan.svg') center / cover;">
+                <h2 class="mdl-card__title-text">South Sudan</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Read More..
+                </a>
+              </div>
+              <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">share</i>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title" style="background: url('img/Flag_of_Burundi.svg') center / cover;">
+                <h2 class="mdl-card__title-text">Burundi</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Read More..
+                </a>
+              </div>
+              <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">share</i>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title" style="background: url('img/Flag_of_Tanzania.svg') center / cover;">
+                <h2 class="mdl-card__title-text">Tanzania</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Read More..
+                </a>
+              </div>
+              <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">share</i>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title" style="background: url('img/Flag_of_Uganda.svg') center / cover;">
+                <h2 class="mdl-card__title-text">Uganda</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Read More..
+                </a>
+              </div>
+              <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">share</i>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title" style="background: url('img/Flag_of_the_Democratic_Republic_of_the_Congo.svg') center / cover;">
+                <h2 class="mdl-card__title-text">Congo</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Read More..
+                </a>
+              </div>
+              <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">share</i>
+                </button>
+              </div>
+            </div>
+        </div>
         </div>
       </div>
 
@@ -103,10 +337,475 @@
     </footer>
   </main>
 </div>
-<script type="text/javascript">
-  $("#godown").click(function (event) {
-      $('main').animate({ scrollTop: '500px' }, "slow");
-  });
-</script>
+<div class="bigdata-bg">
+  
+</div>
+<div class="bigdata">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title" style="background: url('img/Flag_of_Egypt.svg') center / cover;">
+            <h2 class="mdl-card__title-text">Egypt</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Read More..
+            </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title" style="background: url('img/Flag_of_Sudan.svg') center / cover;">
+            <h2 class="mdl-card__title-text">Sudan</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Read More..
+            </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title" style="background: url('img/Flag_of_Kenya.svg') center / cover;">
+            <h2 class="mdl-card__title-text">Kenya</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Read More..
+            </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title" style="background: url('img/Flag_of_Ethiopia.svg') center / cover;">
+            <h2 class="mdl-card__title-text">Ethiopia</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Read More..
+            </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title" style="background: url('img/Flag_of_Eritrea.svg') center / cover;">
+            <h2 class="mdl-card__title-text">Eritrea</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Read More..
+            </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title" style="background: url('img/Flag_of_Rwanda.svg') center / cover;">
+            <h2 class="mdl-card__title-text">Rwanda</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Read More..
+            </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title" style="background: url('img/Flag_of_South_Sudan.svg') center / cover;">
+            <h2 class="mdl-card__title-text">South Sudan</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Read More..
+            </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title" style="background: url('img/Flag_of_Burundi.svg') center / cover;">
+            <h2 class="mdl-card__title-text">Burundi</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Read More..
+            </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title" style="background: url('img/Flag_of_Tanzania.svg') center / cover;">
+            <h2 class="mdl-card__title-text">Tanzania</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Read More..
+            </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title" style="background: url('img/Flag_of_Uganda.svg') center / cover;">
+            <h2 class="mdl-card__title-text">Uganda</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Read More..
+            </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title" style="background: url('img/Flag_of_the_Democratic_Republic_of_the_Congo.svg') center / cover;">
+            <h2 class="mdl-card__title-text">Congo</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Read More..
+            </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div>
+        </div>
+    </div>
+    </div><div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" style="background: url('img/Flag_of_Egypt.svg') center / cover;">
+              <h2 class="mdl-card__title-text">Egypt</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Read More..
+              </a>
+            </div>
+            <div class="mdl-card__menu">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+              </button>
+            </div>
+          </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" style="background: url('img/Flag_of_Sudan.svg') center / cover;">
+              <h2 class="mdl-card__title-text">Sudan</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Read More..
+              </a>
+            </div>
+            <div class="mdl-card__menu">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+              </button>
+            </div>
+          </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" style="background: url('img/Flag_of_Kenya.svg') center / cover;">
+              <h2 class="mdl-card__title-text">Kenya</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Read More..
+              </a>
+            </div>
+            <div class="mdl-card__menu">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+              </button>
+            </div>
+          </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" style="background: url('img/Flag_of_Ethiopia.svg') center / cover;">
+              <h2 class="mdl-card__title-text">Ethiopia</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Read More..
+              </a>
+            </div>
+            <div class="mdl-card__menu">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+              </button>
+            </div>
+          </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" style="background: url('img/Flag_of_Eritrea.svg') center / cover;">
+              <h2 class="mdl-card__title-text">Eritrea</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Read More..
+              </a>
+            </div>
+            <div class="mdl-card__menu">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+              </button>
+            </div>
+          </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" style="background: url('img/Flag_of_Rwanda.svg') center / cover;">
+              <h2 class="mdl-card__title-text">Rwanda</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Read More..
+              </a>
+            </div>
+            <div class="mdl-card__menu">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+              </button>
+            </div>
+          </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" style="background: url('img/Flag_of_South_Sudan.svg') center / cover;">
+              <h2 class="mdl-card__title-text">South Sudan</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Read More..
+              </a>
+            </div>
+            <div class="mdl-card__menu">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+              </button>
+            </div>
+          </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" style="background: url('img/Flag_of_Burundi.svg') center / cover;">
+              <h2 class="mdl-card__title-text">Burundi</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Read More..
+              </a>
+            </div>
+            <div class="mdl-card__menu">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+              </button>
+            </div>
+          </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" style="background: url('img/Flag_of_Tanzania.svg') center / cover;">
+              <h2 class="mdl-card__title-text">Tanzania</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Read More..
+              </a>
+            </div>
+            <div class="mdl-card__menu">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+              </button>
+            </div>
+          </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" style="background: url('img/Flag_of_Uganda.svg') center / cover;">
+              <h2 class="mdl-card__title-text">Uganda</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Read More..
+              </a>
+            </div>
+            <div class="mdl-card__menu">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+              </button>
+            </div>
+          </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col wow bounceInUp">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" style="background: url('img/Flag_of_the_Democratic_Republic_of_the_Congo.svg') center / cover;">
+              <h2 class="mdl-card__title-text">Congo</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Read More..
+              </a>
+            </div>
+            <div class="mdl-card__menu">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+              </button>
+            </div>
+          </div>
+      </div>
+      </div>
+</div>
   </body>
 </html>

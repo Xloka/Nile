@@ -11,7 +11,8 @@
     <script src="bower_components/angular-full/angular.min.js"></script>
     <script src="bower_components/material-design-lite/material.min.js"></script>
     <script src="bower_components/wow/dist/wow.min.js"></script>
-    <script src="js/s.js"></script>
+    <script src="js/isin.js"></script>
+<script src="js/s.js"></script>
 
   </head>
   <body>
@@ -26,7 +27,10 @@
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="/index.html">Home</a>
         <a class="mdl-navigation__link" href="/about.html">About</a>
-        <a class="mdl-navigation__link" href="/nile.html">Nile</a>
+        <a id="demo-menu-lower-left"  class="mdl-navigation__link" href="#">Nile</a>
+        <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
+          <li class="mdl-menu__item">Some Action</li>
+        </ul>
         <a class="mdl-navigation__link" href="/creatures.html">Creatures</a>
         <a class="mdl-navigation__link" href="/sights.html">Sights</a>
         <a class="mdl-navigation__link" href="/news.html">News</a>
@@ -58,7 +62,7 @@
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="/index.html">Home</a>
       <a class="mdl-navigation__link" href="/about.html">About</a>
-      <a class="mdl-navigation__link" href="/nile.html">Nile</a>
+
       <a class="mdl-navigation__link" href="/creatures.html">Creatures</a>
       <a class="mdl-navigation__link" href="/sights.html">Sights</a>
       <a class="mdl-navigation__link" href="/news.html">News</a>
@@ -80,13 +84,14 @@
   <i class="material-icons">&#xE313;</i>
 </button>
 </div>
-<div class="page ">
+<div class="page">
     <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--6-col">
+        <div class="wow slideInLeft mdl-cell mdl-cell--6-col">
             <h3 class="topme"><span class="pc">Contact</span> Info.</h3>
         </div>
-        <div class="mdl-cell mdl-cell--6-col">
+        <div class="wow slideInRight mdl-cell mdl-cell--6-col">
             <p class="topme-data">
+              <b>Email : </b> contact@ikancode.com <br />
               <b>Address : </b> 7 Somestreet, Aswan , Egypt.<br />
               <b>Mobile :  </b> +201118038009<br />
               <b>Fax :  </b> 0972307654
@@ -118,10 +123,6 @@
     </footer>
   </main>
 </div>
-<script type="text/javascript">
-  $("#godown").click(function (event) {
-      $('main').animate({ scrollTop: '500px' }, "slow");
-  });
-</script>
+
   </body>
 </html>
