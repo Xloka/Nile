@@ -178,7 +178,7 @@ footer {
 }
 .mdl-mega-footer,.mdl-layout__drawer , .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
   color: $secondary-color;
-  background-color: $primary-color;
+  background-color: #0F47AF;
 }
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover{
   background-color: $secondary-color;
@@ -229,3 +229,6 @@ color: $primary-color;
   left: 12%;
   z-index: 1;
 }
+.mdl-layout__header-row .mdl-navigation {
+    margin: 0 auto;
+  }
