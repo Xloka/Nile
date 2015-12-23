@@ -32,7 +32,7 @@ window.onload=function(){
         });
       }
   });
-  //$('.loading').slideUp('fast');
+  $('.loading').slideUp('fast');
 };
 
 

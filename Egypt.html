@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html ng-app="nile">
+  <head>
+    <meta charset="utf-8">
+    <title>Nile Museum</title>
+    <link rel="stylesheet" href="bower_components/material-design-lite/material.min.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/s.min.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular-full/angular.min.js"></script>
+    <script src="bower_components/material-design-lite/material.min.js"></script>
+    <script src="bower_components/wow/dist/wow.min.js"></script>
+    <script src="js/isin.js"></script>
+    <script src="js/s.js"></script>
+
+  </head>
+  <body>
+    <div class="loading">
+      <h1 ><img src="img/Logo.png" alt=""></h1>
+      <div class="wrap">
+  <div class="drop-outer">
+    <svg class="drop" viewBox="0 0 40 40" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="20" r="20"/>
+    </svg>
+  </div>
+  <div class="ripple ripple-1">
+      <svg class="ripple-svg" viewBox="0 0 60 60" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="30" cy="30" r="24"/>
+      </svg>
+  </div>
+  <div class="ripple ripple-2">
+      <svg class="ripple-svg" viewBox="0 0 60 60" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="30" cy="30" r="24"/>
+      </svg>
+  </div>
+  <div class="ripple ripple-3">
+      <svg class="ripple-svg" viewBox="0 0 60 60" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="30" cy="30" r="24"/>
+      </svg>
+  </div>
+</div>
+        <br>
+        <span>Loading...</span>
+    </div>
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title"><span class="pc">Nile</span> Museum</span>
+      <!-- Add spacer, to align navigation to the right -->
+
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="/index.html">Home</a>
+        <a class="mdl-navigation__link" href="/about.html">About</a>
+        <a id="demo-menu-lower-left"  class="mdl-navigation__link" href="#">Nile</a>
+          <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+              for="demo-menu-lower-left">
+            <li class="mdl-menu__item"><a href="/Egypt.html"><img src="img/Flag_of_Egypt.svg" alt="">Egypt</a></li>
+            <li class="mdl-menu__item"><a href="/Sudan.html"><img src="img/Flag_of_Sudan.svg" alt="">Sudan</a></li>
+            <li class="mdl-menu__item"><a href="/Kenya.html"><img src="img/Flag_of_Kenya.svg" alt="">Kenya</a></li>
+            <li class="mdl-menu__item"><a href="/Ethiopia.html"><img src="img/Flag_of_Ethiopia.svg" alt="">Ethiopia</a></li>
+            <li class="mdl-menu__item"><a href="/Rwanda.html"><img src="img/Flag_of_Rwanda.svg" alt="">Rwanda</a></li>
+            <li class="mdl-menu__item"><a href="/Uganda.html"><img src="img/Flag_of_Uganda.svg" alt="">Uganda</a></li>
+            <li class="mdl-menu__item"><a href="/South_Sudan.html"><img src="img/Flag_of_South_Sudan.svg" alt="">South_Sudan</a></li>
+            <li class="mdl-menu__item"><a href="/Burundi.html"><img src="img/Flag_of_Burundi.svg" alt="">Burundi</a></li>
+            <li class="mdl-menu__item"><a href="/Tanzania.html"><img src="img/Flag_of_Tanzania.svg" alt="">Tanzania</a></li>
+            <li class="mdl-menu__item"><a href="/the_Democratic_Republic_of_the_Congo.html"><img src="img/Flag_of_the_Democratic_Republic_of_the_Congo.svg" alt="">Congo</a></li>
+            <li class="mdl-menu__item"><a href="/Eritrea.html"><img src="img/Flag_of_Eritrea.svg" alt="">Eritrea</a></li>
+          </ul>
+        <a class="mdl-navigation__link" href="/creatures.html">Creatures</a>
+        <a class="mdl-navigation__link" href="/sights.html">Sights</a>
+        <a class="mdl-navigation__link" href="/news.html">News</a>
+        <a class="mdl-navigation__link" href="/contact.html">Contact</a>
+
+      </nav>
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width ">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" id="sample6">
+            <label class="mdl-textfield__label" for="sample-expandable">Search</label>
+          </div>
+        </div>
+      </form>
+      <button id="lang-switcher" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">language</i>
+      </button>
+      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu" for="lang-switcher">
+          <li class="mdl-menu__item">English</li>
+          <li class="mdl-menu__item">عربي</li>
+          <li class="mdl-menu__item">French</li>
+      </ul>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Nile Museum</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/index.html">Home</a>
+      <a class="mdl-navigation__link" href="/about.html">About</a>
+      <a id="demo-menu-lower-left"  class="mdl-navigation__link" href="#">Nile</a>
+      <a class="mdl-navigation__link" href="/creatures.html">Creatures</a>
+      <a class="mdl-navigation__link" href="/sights.html">Sights</a>
+      <a class="mdl-navigation__link" href="/news.html">News</a>
+      <a class="mdl-navigation__link" href="/contact.html">Contact</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content" >
+
+      <!-- begin -->
+      <style>
+        .demo-layout-transparent {
+          background: url(img/Flag_of_Egypt.svg) center / cover;
+        }
+
+      </style>
+      <div class="first-section">
+        <h1 class="wow bounceInDown white-text"><span class="pc">Egypt</span></h1>
+        <button id="godown"   class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored ">
+          <i class="material-icons ">keyboard_arrow_down</i>
+        </button>
+      </div>
+      <div class="page clean-heading">
+        <div class="wow bounceInUp heading">
+          <h1><span class="pc">Egypt</span> <sub><small>the Arab Republic of Egypt</small></sub></h1>
+        </div>
+        <div class="mdl-grid">
+          <div class="wow slideInLeft mdl-cell mdl-cell--6-col">
+              <h3 class="topme"><span class="pc">Summary</span> of Egypt</h3>
+          </div>
+          <div class="wow slideInRight mdl-cell mdl-cell--6-col">
+              <p class="topme-data" style="transform: translate(0%, 0%);">
+              Egypt, a country linking northeast Africa with the Middle East, dates to the time of the pharaohs. Millennia-old monuments still sit along the fertile Nile River Valley, including the colossal Pyramids and Sphinx at Giza and the hieroglyph-lined Karnak Temple and Valley of the Kings tombs in Luxor. The capital, Cairo, is home to Ottoman landmarks such as Muhammad Ali Mosque.
+            </p>
+            </div>
+        </div>
+        <br>
+        <div class="mdl-grid">
+          <div class="wow slideInLeft mdl-cell mdl-cell--6-col">
+              <h3 class="topme"><span class="pc">Main</span> Info.</h3>
+          </div>
+          <div class="wow slideInRight mdl-cell mdl-cell--6-col">
+              <p class="topme-data">
+              <b>Capital:</b> Cairo <br>
+              <b>Dialing code:</b> +20 <br>
+              <b>ISO code:</b> EGY <br>
+              <b>Currency:</b> Egyptian pound <br>
+              <b>Population:</b> 82.06 million (2013) <br>
+            </p>
+          </div>
+        </div>
+        <div class="mdl-grid">
+          <br>
+          <hr>
+          <br>
+        </div>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--6-col">
+                  <div>
+                      <h2 class="pc">Names</h2>
+                      <p>
+                        The English name Egypt is derived from the Ancient Greek Aígyptos (Αἴγυπτος), via Middle French Egypte and Latin Aegyptus. It is reflected in early Greek Linear B tablets as a-ku-pi-ti-yo. The adjective aigýpti-, aigýptios was borrowed into Coptic as gyptios, and from there into Arabic as qubṭī, back formed into قبط qubṭ
+                      </p>
+                  </div>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col">
+                  <div class="demo-card-image mdl-card mdl-shadow--2dp" style="  background: url('img/Giza.jpg') center / cover;">
+                    <div class="mdl-card__title mdl-card--expand"></div>
+                    <div class="mdl-card__actions">
+                      <span class="demo-card-image__filename">The Giza Necropolis is the oldest of the ancient Wonders and the only one still in existence.</span>
+                    </div>
+                  </div>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col">
+
+                  <div class="demo-card-image mdl-card mdl-shadow--2dp" style="  background: url('img/Cesarion.jpg') center / cover;">
+                    <div class="mdl-card__title mdl-card--expand"></div>
+                    <div class="mdl-card__actions">
+                      <span class="demo-card-image__filename">The Greek Ptolemaic queen Cleopatra VII and her son by Julius Caesar, Caesarion at the Temple of Dendera.</span>
+                    </div>
+                  </div>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col">
+                  <div>
+                      <h2 class="pc">Ancient Egypt</h2>
+                      <p>
+                        There is evidence of rock carvings along the Nile terraces and in desert oases. In the 10th millennium BC, a culture of hunter-gatherers and fishers was replaced by a grain-grinding culture. Climate changes or overgrazing around <span class="pc">8000 BC </span>began to desiccate the pastoral lands of Egypt, forming the Sahara. Early tribal peoples migrated to the Nile River where they developed a settled agricultural economy and more centralised society
+                      </p>
+                  </div>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col">
+                  <div>
+                      <h2 class="pc">Ottoman Egypt</h2>
+                      <p>
+                        Egypt was conquered by the <span class="pc">Ottoman </span>Turks in 1517, after which it became a province of the Ottoman Empire. The defensive militarisation damaged its civil society and economic institutions. The weakening of the economic system combined with the effects of plague left Egypt vulnerable to foreign invasion. Portuguese traders took over their trade. Between 1687 and 1731, Egypt experienced six famines. The 1784 famine cost it roughly one-sixth of its population.
+                      </p>
+                  </div>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col">
+                  <div class="demo-card-image mdl-card mdl-shadow--2dp" style="  background: url('img/Atlas.jpg') center / cover;">
+                    <div class="mdl-card__title mdl-card--expand"></div>
+                    <div class="mdl-card__actions">
+                      <span class="demo-card-image__filename">The Greek Ptolemaic queen Cleopatra VII and her son by Julius Caesar, Caesarion at the Temple of Dendera.</span>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </div>
+
+      <!--- End -->
+
+    </div>
+    <footer class="mdl-mega-footer">
+    <div class="mdl-mega-footer__bottom-section">
+    <div class="mdl-logo">Nile Museum &copy;</div>
+    <ul>
+      <li><a href="#/" target="_blank" class="fa fa-facebook" ></a></li>
+      <li><a href="#/" target="_blank" class="fa fa-twitter" ></a></li>
+      <li><a href="#/" target="_blank" class="fa fa-phone" ></a></li>
+    </ul>
+    </div>
+    </footer>
+  </main>
+</div>
+<div class="bigdata-bg"></div><div class="bigdata"><div class="mdl-grid"><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Egypt.svg') center / cover"><h2 class="mdl-card__title-text">Egypt</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Sudan.svg') center / cover"><h2 class="mdl-card__title-text">Sudan</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Kenya.svg') center / cover"><h2 class="mdl-card__title-text">Kenya</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Ethiopia.svg') center / cover"><h2 class="mdl-card__title-text">Ethiopia</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Eritrea.svg') center / cover"><h2 class="mdl-card__title-text">Eritrea</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Rwanda.svg') center / cover"><h2 class="mdl-card__title-text">Rwanda</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_South_Sudan.svg') center / cover"><h2 class="mdl-card__title-text">South Sudan</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Burundi.svg') center / cover"><h2 class="mdl-card__title-text">Burundi</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Tanzania.svg') center / cover"><h2 class="mdl-card__title-text">Tanzania</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Uganda.svg') center / cover"><h2 class="mdl-card__title-text">Uganda</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_the_Democratic_Republic_of_the_Congo.svg') center / cover"><h2 class="mdl-card__title-text">Congo</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div></div><div class="mdl-grid"><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Egypt.svg') center / cover"><h2 class="mdl-card__title-text">Egypt</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Sudan.svg') center / cover"><h2 class="mdl-card__title-text">Sudan</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Kenya.svg') center / cover"><h2 class="mdl-card__title-text">Kenya</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Ethiopia.svg') center / cover"><h2 class="mdl-card__title-text">Ethiopia</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Eritrea.svg') center / cover"><h2 class="mdl-card__title-text">Eritrea</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Rwanda.svg') center / cover"><h2 class="mdl-card__title-text">Rwanda</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_South_Sudan.svg') center / cover"><h2 class="mdl-card__title-text">South Sudan</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Burundi.svg') center / cover"><h2 class="mdl-card__title-text">Burundi</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Tanzania.svg') center / cover"><h2 class="mdl-card__title-text">Tanzania</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_Uganda.svg') center / cover"><h2 class="mdl-card__title-text">Uganda</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div><div class="mdl-cell mdl-cell--4-col wow bounceInUp"><div class="demo-card-wide mdl-card mdl-shadow--2dp"><div class="mdl-card__title" style="background: url('img/Flag_of_the_Democratic_Republic_of_the_Congo.svg') center / cover"><h2 class="mdl-card__title-text">Congo</h2></div><div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...</div><div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More..</a></div><div class="mdl-card__menu"><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">share</i></button></div></div></div></div><button id="close" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"><i class="material-icons">close</i></button></div>
+  </body>
+</html>
