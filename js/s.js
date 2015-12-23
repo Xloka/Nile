@@ -8,14 +8,14 @@ window.onload=function(){
   scrollable.on('scroll.wow', function(){
       scrollable.find('.wow:not(.animated):in-viewport').removeAttr('style').addClass('animated');
   });
-  $('#demo-menu-lower-left').click(function () {
+/*  $('#demo-menu-lower-left').click(function () {
     $('.bigdata-bg').fadeIn('slow');
     $('.bigdata').fadeIn('slow');
   });
   $('.bigdata-bg,#close').click(function () {
     $('.bigdata').fadeOut('slow');
     $('.bigdata-bg').fadeOut('slow');
-  });
+  }); */
   $("#godown").click(function (event) {
       $('main').animate({ scrollTop: '800px' }, "slow");
   });
